@@ -1,12 +1,12 @@
 <template>
   <div id="app">
     <router-view name="BaseHeader"></router-view>
-
+<!-- 
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> |
       <router-link to="/main">Main</router-link>
-    </div>
+    </div> -->
     <router-view/>
     <router-view name="BaseFooter"></router-view>
   </div>

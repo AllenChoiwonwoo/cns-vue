@@ -40,9 +40,9 @@ export default {
             this.axios.post('/auth', this.data)
         .then(function(response) {
           console.log(response.data.data);
-          vm.$cookies.set('token',response.data.data.token);
-          console.log(vm.$cookies.get('token'));
-            vm.$router.push('/main');
+          vm.$cookies.set('accesstoken',response.data.data.token);
+          console.log(vm.$cookies.get('accesstoken'));
+            vm.$router.push('/home/AllPost');
         })
         .catch(function(error) {
           console.log(error);

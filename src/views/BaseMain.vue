@@ -5,10 +5,11 @@
         <div class="my-5"></div>
         <ul class="nav nav-tabs">
           <li class="nav-item">
-            <a class="nav-link active" data-toggle="tab" href="#myfeed">My Feed</a>
+            <a class="nav-link active" data-toggle="tab" href="/home/MyFeed">My Feed</a>
+            
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#posts">All Posts</a>
+            <a class="nav-link" data-toggle="tab" href="/home/AllPost">All Posts</a>
           </li>
         </ul>
         
@@ -18,10 +19,10 @@
         <div class="tab-content">
           <div class="col-md-2"></div>
           <div class="container tab-pane active col-md-8" id="myfeed">
-            <h1 class="my-4"></h1>
+            <h1 class="my-4">test1</h1>
           </div>
           <div class="container tab-pane fade col-md-8" id="posts">
-            <h1 class="my-4"></h1>
+            <h1 class="my-4">tesst2</h1>
           </div>
         </div>
       </div>
@@ -80,8 +81,10 @@ import OnePostCompo from '../components/OnePostCompo.vue'
   export default {
     data() {
       return {
-        isLogin: false,
+        isLogin: true,
         postDataList: [],
+        tab1: true,
+        tab2: false,
       }
     },
     components: {
@@ -91,18 +94,23 @@ import OnePostCompo from '../components/OnePostCompo.vue'
         // this.$cookies.get('token');
         this.getPosts();
     },
+    computed: {
+      
+    },
     methods: {
-
+        changeTab(){
+          if(tab1 == true){}
+        },
         getPosts(){
             var vm = this;
             var config = null;
             // this.$cookies.set("accesstoken", "1whoxnyrwwfkeljyznx");
-            console.log("cookie.token = ", vm.$cookies.get('token') );
+            console.log("cookie.token = ", vm.$cookies.get('accesstoken') );
             
-            if (vm.$cookies.get('token')) {
+            if (vm.$cookies.get('accesstoken')) {
                 config = {
                     headers: {
-                        accesstoken: vm.$cookies.get('token'),
+                        accesstoken: vm.$cookies.get('accesstoken'),
                     }
                 } 
             }

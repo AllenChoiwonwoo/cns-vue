@@ -7,6 +7,8 @@ import BaseMain from '../views/BaseMain.vue'
 import BaseLogin from '../views/BaseLogin.vue'
 import AllPost from '../views/AllPost.vue'
 import MyFeed from '../views/MyFeed.vue'
+import PostDetail from '../views/PostDetail.vue'
+import SignUp from '../views/SignUp.vue'
 
 Vue.use(VueRouter)
 
@@ -18,21 +20,42 @@ const routes = [
   // },
   {
     path: '/home',
-    component: Home,
+    component: 
+    // { 
+      Home,
       // BaseHeader: BaseHeader,
       // default: Home,
       // BaseFooter: BaseFooter,
 
-      children: [{
+      children: [
+        {
         path: 'AllPost',
-        component : AllPost
+        // component : AllPost
+        components: {
+                BaseHeader: BaseHeader,
+                default: AllPost,
+                BaseFooter: BaseFooter,
+        }
       },
       {
         path: 'MyFeed',
+        // component : MyFeed
         components: {
-          default: MyFeed
+          BaseHeader: BaseHeader,
+          default: MyFeed,
+          BaseFooter: BaseFooter,
         }
-      }]
+      },
+      {
+        path: '/',
+        // component : AllPost
+        components: {
+          BaseHeader: BaseHeader,
+          default: AllPost,
+          BaseFooter: BaseFooter,
+        }
+      },
+    ]
 
     // }
   },
@@ -49,6 +72,22 @@ const routes = [
     components: {
       BaseHeader: BaseHeader,
       default: BaseLogin,
+      BaseFooter: BaseFooter,
+    }
+  },
+  {
+    path: '/post/detail/:id',
+    components:{
+      BaseHeader: BaseHeader,
+      default: PostDetail,
+      BaseFooter: BaseFooter,  
+    }
+  },
+  {
+    path: '/signup',
+    components: {
+      BaseHeader: BaseHeader,
+      default: SignUp,
       BaseFooter: BaseFooter,
     }
   },
