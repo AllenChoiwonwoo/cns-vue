@@ -59,14 +59,14 @@ const routes = [
 
     // }
   },
-  {
-    path: '/main',
-    components: {
-      BaseHeader: BaseHeader,
-      default: BaseMain,
-      BaseFooter: BaseFooter,
-    }
-  },
+  // {
+  //   path: '/main',
+  //   components: {
+  //     BaseHeader: BaseHeader,
+  //     default: BaseMain,
+  //     BaseFooter: BaseFooter,
+  //   }
+  // },
   {
     path: '/login',
     components: {
