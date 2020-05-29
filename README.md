@@ -7,7 +7,8 @@ this CP.Shop Vue pjt(front) work with "cns-boot"(back)
 here is ther link :[https://github.com/AllenChoiwonwoo/cns-boot](https://github.com/AllenChoiwonwoo/cns-boot)
 
 # 프로젝트 소개
-간단한 쇼핑몰입니다.
+푸쉬 기반의 SNS 프로젝트입니다.
+ Freemarker 프로젝트를 Vue.js 변경하였습니다.
 
  **기능**
  1. 로그인
