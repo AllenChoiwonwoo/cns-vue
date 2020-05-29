@@ -40,16 +40,19 @@ export default {
             // this.$cookies.set("accesstoken", "1whoxnyrwwfkeljyznx");
             console.log("cookie.token = ", vm.$cookies.get('accesstoken') );
             
-            if (vm.$cookies.get('accesstoken')) {
-                config = {
-                    headers: {
-                        accesstoken: vm.$cookies.get('accesstoken'),
-                    }
-                } 
-            }
-            console.log("getPosts - ",config);
+            // if (vm.$cookies.get('accesstoken')) {
+            //     config = {        
+            //         headers: {
+            //             withCredentials : true,
+            //             accesstoken: vm.$cookies.get('accesstoken'),
+            //         }
+            //     } 
             
-            this.axios.get('/post', config)
+            // }
+            
+            config = { withCredentials: true }
+            console.log("getPosts - ",config);
+            this.axios.get('/post', config )
             .then(function(response){
                 console.log(response.data);
                 vm.postDataList = response.data.data;
