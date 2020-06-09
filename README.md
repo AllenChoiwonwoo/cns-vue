@@ -19,11 +19,10 @@ here is ther link :[https://github.com/AllenChoiwonwoo/cns-boot](https://github.
 
 ## 제작 정보
 vue-router 템플릿을 기반으로 만든 간단한 SNS사이트 입니다.
-CodePresso 의  Dev-ops 과정을 수강하면 개발한 학습용 프로젝트 입니다.
 
 ## 사용 안내
 CNS-vue 는 기본 포트를 8081로 설정해 놓았습니다.
-CNS-boot 가 8080포트라는 전제하에 작성되 코드 입니다.
+API Server가 8080포트라는 전제하에 작성되 코드 입니다.
 
 ## 사용기술
  - HTML/CSS
